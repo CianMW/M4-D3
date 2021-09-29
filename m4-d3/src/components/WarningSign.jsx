@@ -1,22 +1,16 @@
 import Alert from 'react-bootstrap/Alert'
 
-const WarningAlert = () = {
+const WarningAlert = (props) => {
+ return (
+    <Alert variant="danger" dismissible>
+    <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+    <p>
+     {props.comment}
+    </p>
+  </Alert>
+ )
 
-        return (
-        [
-            'primary',
-            'secondary',
-            'success',
-            'danger',
-            'warning',
-            'info',
-            'light',
-            'dark',
-        ].map((variant, idx) => (
-            <Alert key={idx} variant={variant}>
-            This is a {variant} alert—check it out!
-            </Alert>
-        ));
-        )
 
 }
+
+export default WarningAlert
